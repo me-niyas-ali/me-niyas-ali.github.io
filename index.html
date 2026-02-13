@@ -1,578 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Niyas Ali | Web Developer Portfolio</title>
-    <meta name="description" content="Niyas Ali — Full Stack web developer specializing in HTML, CSS, JavaScript, and Bootstrap. Explore projects and portfolio.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Niyas Ali",
-        "url": "https://niyasali.online",
-        "jobTitle": "Frontend Web Developer",
-        "sameAs": ["https://www.instagram.com/me.niyas.ali"]
-      }
-    </script>
-    <style>
-      /* ===== Base ===== 05pm-09*/
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        transition: background 0.3s, color 0.3s, border 0.3s !important;
-        bordr: 1px solid red;
-      }
+<head>
+ <meta charset="UTF-8">
+ <title>Niyas Ali | Web Developer Portfolio</title>
+ <meta name="description" content="Niyas Ali — Full Stack web developer specializing in HTML, CSS, JavaScript, and Bootstrap. Explore projects and portfolio.">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" href="favicon.ico" sizes="any">
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+ <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "Person",
+   "name": "Niyas Ali",
+   "url": "https://niyasali.online",
+   "jobTitle": "Frontend Web Developer",
+   "sameAs": ["https://www.instagram.com/me.niyas.ali"]
+  }
+ </script>
+ <style>
+  /* ===== Base ===== 05pm-09*/
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   transition: background 0.3s, color 0.3s, border 0.3s !important;
+   bordr: 1px solid red;
+  }
 
-      body {
-        background: #242424;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      }
+  body {
+   background: #242424;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
 
-      .card {
-        background-color: #1a1a1a;
-        border-radius: 20px;
-        border: 1px solid #404040;
-      }
+  .text-secondary {
+   color: #b0b0b0 !important;
+  }
 
-      /* ===== Buttons ===== */
-      .btn {
-        background: #1f1f1f;
-        border-radius: 10px;
-        border: 2px solid #363636;
-        color: #ccc;
-        height: 50px;
-      }
+  .card {
+   background-color: #1a1a1a;
+   border-radius: 20px;
+   border: 1px solid #404040;
+  }
 
-      .btn:hover {
-        background: #2a2a2a;
-        border: 2px solid #808080;
-        color: #fff;
-        cursor: pointer;
-      }
+  /* ===== Buttons ===== */
+  .btn {
+   background: #1f1f1f;
+   border-radius: 10px;
+   border: 2px solid #363636;
+   color: #ccc;
+   height: 50px;
+  }
 
-      .nav-btn {
-        transition: background 0.3s ease;
-      }
+  .btn:hover {
+   background: #2a2a2a;
+   border: 2px solid #808080;
+   color: #fff;
+   cursor: pointer;
+  }
 
-      .nav-btn.active-btn {
-        border: 2px solid #808080;
-      }
+  .nav-btn {
+   transition: background 0.3s ease;
+  }
 
-      /* ===== Profile ===== */
-      .badge {
-        color: #adadad;
-        font-size: 0.8rem;
-        border-radius: 10px;
-        border: 2px solid #464646;
-        position: relative;
-        padding: 13px 10px 13px 30px;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-      }
+  .nav-btn.active-btn {
+   border: 2px solid #808080;
+  }
 
-      .badge::before {
-        content: "";
-        width: 10px;
-        height: 10px;
-        background-color: #03ba00;
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+  /* ===== Profile ===== */
+  .badge {
+   color: #adadad;
+   font-size: 0.8rem;
+   border-radius: 10px;
+   border: 2px solid #464646;
+   position: relative;
+   padding: 13px 10px 13px 30px;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   gap: 5px;
+  }
 
-      .avatar {
-        width: 130px;
-        height: 130px;
-        border-radius: 30%;
-        border: 2px solid #363636;
-        margin-top: 10px;
-      }
+  .badge::before {
+   content: "";
+   width: 10px;
+   height: 10px;
+   background-color: #03ba00;
+   border-radius: 50%;
+   display: inline-block;
+   position: absolute;
+   left: 12px;
+   top: 50%;
+   transform: translateY(-50%);
+  }
 
-      /* ===== Projects ===== */
-      .project-item {
-        background: #222;
-        border-radius: 10px;
-        border: 2px solid #363636;
-        padding: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 12px;
-        cursor: pointer;
-      }
+  .avatar {
+   width: 130px;
+   height: 130px;
+   border-radius: 30%;
+   border: 2px solid #363636;
+   margin-top: 10px;
+  }
 
-      .project-item:hover {
-        border: 2px solid #555555;
-      }
+  /* ===== Projects ===== */
+  .project-item {
+   background: #222;
+   border-radius: 10px;
+   border: 2px solid #363636;
+   padding: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 12px;
+   cursor: pointer;
+  }
 
-      .project-icon {
-        width: 80px;
-        height: 80px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: white;
-        margin-right: 14px;
-      }
+  .project-item:hover {
+   border: 2px solid #555555;
+  }
 
-      .project-icon img {
-        width: 100%;
-        object-fit: contain;
-        border-radius: 8px;
-      }
+  .project-icon {
+   width: 80px;
+   height: 80px;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   color: white;
+   margin-right: 14px;
+  }
 
-      .expertise-item {
-        height: 130px;
-        background: #222;
-        border-radius: 12px;
-        border: 2px solid #363636;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* vertical center */
-        align-items: center;
-        /* horizontal center */
-        padding: 12px;
-      }
+  .project-icon img {
+   width: 100%;
+   object-fit: contain;
+   border-radius: 8px;
+  }
 
-      .expertise-item img {
-        height: 60px;
-        width: 60px;
-        object-fit: cover;
-        margin-top: 10px;
-      }
+  .expertise-item {
+   height: 130px;
+   background: #222;
+   border-radius: 12px;
+   border: 2px solid #363636;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* vertical center */
+   align-items: center;
+   /* horizontal center */
+   padding: 12px;
+  }
 
-      .expertise-item:hover {
-        border: 2px solid #555555;
-      }
+  .expertise-item img {
+   height: 60px;
+   width: 60px;
+   object-fit: cover;
+   margin-top: 10px;
+  }
 
-      .form-control {
-        background: #242424 !important;
-        border: 2px solid #363636;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container my-4" style="max-width: 500px;">
-      <!-- Top Bar Start -->
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex gap-3">
-          <button class="btn btn-lg d-flex align-items-center justify-content-center nav-btn" id="homeBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home" aria-label="Home button">
-            <i class="bi bi-house"></i>
-          </button>
-          <button class="btn btn-lg d-flex align-items-center justify-content-center nav-btn profileBtn" id="profileBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="About Me" aria-label="About Me Button">
-            <i class="bi bi-person"></i>
-          </button>
-          <button class="btn btn-lg d-flex align-items-center justify-content-center nav-btn projectsBtn" id="projectsBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Projects" aria-label="My Projects Button">
-            <i class="bi bi-window"></i>
-          </button>
+  .expertise-item:hover {
+   border: 2px solid #555555;
+  }
+
+  .form-control {
+   background: #242424 !important;
+   border: 2px solid #363636;
+  }
+ </style>
+</head>
+<body>
+ <main>
+  <div class="container my-4" style="max-width: 500px;">
+   <!-- Top Bar Start -->
+   <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex gap-3">
+     <button class="btn btn-lg d-flex align-items-center justify-content-center nav-btn" id="homeBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home" aria-label="Home button">
+      <i class="bi bi-house"></i>
+     </button>
+     <button class="btn btn-lg d-flex align-items-center justify-content-center nav-btn profileBtn" id="profileBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="About Me" aria-label="About Me Button">
+      <i class="bi bi-person"></i>
+     </button>
+     <button class="btn btn-lg d-flex align-items-center justify-content-center nav-btn projectsBtn" id="projectsBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Projects" aria-label="My Projects Button">
+      <i class="bi bi-window"></i>
+     </button>
+    </div>
+    <div>
+     <button class="btn nav-btn hireMeBtn" id="hireMeBtn" aria-label="Hire Me Button">
+      <i class="bi bi-plus-circle me-1"></i> Hire Me </button>
+    </div>
+   </div>
+   <!-- Top Bar End -->
+   <!-- Home -->
+   <div id="homePage">
+    <!-- Profile -->
+    <div class="card p-4 mt-4" id="profileCard">
+     <div class="d-flex justify-content-between align-items-center">
+      <div>
+       <div class="badge d-inline-flex align-items-center badge" aria-label="Front-End Web Designer">
+        Front-End Web Designer
+       </div>
+       <h1 class="fw-bold text-light mt-3">I’m Niyas Ali</h1>
+       <p class="text-light mb-3">
+        Freelance Web designer. <br>Kerala, India.
+       </p>
+       <div class="d-flex gap-2">
+        <button class="btn btn-sm copy-email-btn" data-email="niyasaliskrm1@gmail.com" aria-label="Copy Email Button">
+         <i class="bi bi-clipboard m-1"></i> Copy Email </button>
+        <button class="btn btn-sm profileBtn" aria-label="About Me Button">
+         <i class="bi bi-info-circle m-1"></i> About me </button>
+       </div>
+      </div>
+      <div class="text-center">
+       <img src="https://niyasali.online/images/niyas-ali.jpg" class="avatar" alt="Profile Image of Niyas Ali">
+      </div>
+     </div>
+    </div>
+    <!-- Profile End -->
+    <!-- Expertise -->
+    <div class="card p-4 mt-4" id="expertiseCard">
+     <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="my-3 text-light">Expertise</h2>
+     </div>
+     <div class="row g-3">
+      <!-- Item 1 -->
+      <div class="col-4">
+       <div class="expertise-item text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/960px-HTML5_logo_and_wordmark.svg.png" alt="Html 5" class="img-fluid rounded mb-2">
+        <div class="fw-semibold text-light">
+         HTML 5
+        </div>
+        <!--small class="text-secondary d-block mb-2"> - </small-->
+       </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="col-4">
+       <div class="expertise-item text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png" alt="CSS3" class="img-fluid rounded mb-2">
+        <div class="fw-semibold text-light">
+         CSS 3
+        </div>
+        <!--small class="text-secondary d-block mb-2"> - </small-->
+       </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="col-4">
+       <div class="expertise-item text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" alt="Bootstrap logo" class="img-fluid rounded mb-2">
+        <div class="fw-semibold text-light">
+         Bootstrap 5
+        </div>
+        <!--small class="text-secondary d-block mb-2"> - </small-->
+       </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="col-4">
+       <div class="expertise-item text-center">
+        <img src="https://miro.medium.com/0*eFomJUFua8tuqe8g.png" alt="JQuery Image" class="img-fluid rounded mb-2">
+        <div class="fw-semibold text-light">
+         JQuery
+        </div>
+        <!--small class="text-secondary d-block mb-2"> - </small-->
+       </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="col-4">
+       <div class="expertise-item text-center">
+        <img src="https://www.w3schools.com/whatis/img_js.png" alt="JavaScript Image" class="img-fluid rounded mb-2">
+        <div class="fw-semibold text-light">
+         JavaScript
+        </div>
+        <!--small class="text-secondary d-block mb-2"> - </small-->
+       </div>
+      </div>
+      <!-- Item 6 -->
+      <div class="col-4">
+       <div class="expertise-item text-center">
+        <img src="https://www.careercollegeindia.com/blog/wp-content/uploads/2024/09/UI-UX-Designer-scaled.jpg" alt="UI and UX" class="img-fluid rounded mb-2">
+        <div class="fw-semibold text-light">
+         UI, UX
+        </div>
+        <!--small class="text-secondary d-block mb-2"> - </small-->
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Expertise End -->
+    <!-- Projects -->
+    <div class='card p-4 mt-4' id='projectsCard'>
+     <div class='d-flex justify-content-between align-items-center mb-3'>
+      <h2 class='mb-0 text-light'>My Projects</h2>
+      <a href='#'>
+       <button class='btn projectsBtn' aria-label="View All Button"> View all <i class='bi bi-chevron-right m-1'></i>
+       </button>
+      </a>
+     </div>
+     <!-- Project Item -->
+     <a href="https://niyasali.w3spaces.com/nextrip-demo.html/" target="_blank" class="project-item text-decoration-none">
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='Nextrip logo' src='/images/nextrip.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Nextrip
+        </div>
+        <small class='text-secondary'>Landing page, Visual design, Branding, <br /> Calls-to-action, Responsive layout </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </a>
+     <!-- Project Item End -->
+     <!-- Project Item -->
+     <a href="https://textio-share.blogspot.com" target="_blank" class="project-item text-decoration-none">
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='textio share' src='/images/textio-share.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Textio Share
+        </div>
+        <small class='text-secondary'>Firebase Integration, Visual design, <br /> Responsive layout </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </a>
+     <!-- Project Item End -->
+     <!-- Project Item -->
+     <a href="https://me-niyas-ali.github.io/windows-11-mockup/" target="_blank" class="project-item text-decoration-none">
+       <div class='d-flex align-items-center'>
+        <div class='project-icon bg-light'>
+         <img alt='windows 11 mockup' src='/images/windows-11-mockup.jpg' />
         </div>
         <div>
-          <button class="btn nav-btn hireMeBtn" id="hireMeBtn" aria-label="Hire Me Button">
-            <i class="bi bi-plus-circle me-1"></i> Hire Me </button>
+         <div class='fw-semibold text-light'>
+          Windows 11 Mockup
+         </div>
+         <small class='text-secondary'>Visual design, Responsive layout, <br /> Interactive Icons </small>
         </div>
+       </div>
+       <i class='bi bi-box-arrow-up-right text-light'></i>
+      </a>
+      <!-- Project Item End -->
+     </div>
+     <!-- Projects End -->
+     <!-- Hire me -->
+     <div class="card p-4 text-center mt-4" id="hireMeCard">
+      <h2 class="fw-bold text-light"> Lets work together</h2>
+      <p class="text-light mb-3">
+       Creating user experience and visual appealing designs
+      </p>
+      <div class="d-flex justify-content-center align-items-center gap-3">
+       <button class="btn hireMeBtn" aria-label="Hire Me Button">
+        <i class="bi bi-plus-circle"></i> Hire Me </button>
+       <button class="btn btn-sm copy-email-btn" data-email="niyasaliskrm1@gmail.com" aria-label="Copy Email Button">
+        <i class="bi bi-clipboard m-1"></i> Copy Email </button>
       </div>
-      <!-- Top Bar End -->
-      <!-- Home -->
-      <div id="homePage">
-        <!-- Profile -->
-        <div class="card p-4 mt-4" id="profileCard">
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <div class="badge d-inline-flex align-items-center badge" aria-label="Front-End Web Designer">Front-End Web Designer</div>
-              <h1 class="fw-bold text-light mt-3">I’m Niyas Ali</h1>
-              <p class="text-light mb-3"> Freelance Web designer. <br>Kerala, India. </p>
-              <div class="d-flex gap-2">
-                <button class="btn btn-sm copy-email-btn" data-email="niyasaliskrm1@gmail.com" aria-label="Copy Email Button">
-                  <i class="bi bi-clipboard m-1"></i> Copy Email </button>
-                <button class="btn btn-sm profileBtn" aria-label="About Me Button">
-                  <i class="bi bi-info-circle m-1"></i> About me </button>
-              </div>
-            </div>
-            <div class="text-center">
-              <img src="https://niyasali.online/images/niyas-ali.jpg" class="avatar" alt="Profile Image of Niyas Ali">
-            </div>
-          </div>
-        </div>
-        <!-- Profile End -->
-        <!-- Expertise -->
-        <div class="card p-4 mt-4" id="expertiseCard">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h2 class="my-3 text-light">Expertise</h2>
-          </div>
-          <div class="row g-3">
-            <!-- Item 1 -->
-            <div class="col-4">
-              <div class="expertise-item text-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/960px-HTML5_logo_and_wordmark.svg.png" alt="Html 5" class="img-fluid rounded mb-2">
-                <div class="fw-semibold text-light"> HTML 5 </div>
-                <!--small class="text-secondary d-block mb-2"> - </small-->
-              </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="col-4">
-              <div class="expertise-item text-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png" alt="CSS3" class="img-fluid rounded mb-2">
-                <div class="fw-semibold text-light"> CSS 3 </div>
-                <!--small class="text-secondary d-block mb-2"> - </small-->
-              </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="col-4">
-              <div class="expertise-item text-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" alt="Bootstrap logo" class="img-fluid rounded mb-2">
-                <div class="fw-semibold text-light"> Bootstrap 5 </div>
-                <!--small class="text-secondary d-block mb-2"> - </small-->
-              </div>
-            </div>
-            <!-- Item 4 -->
-            <div class="col-4">
-              <div class="expertise-item text-center">
-                <img src="https://miro.medium.com/0*eFomJUFua8tuqe8g.png" alt="JQuery Image" class="img-fluid rounded mb-2">
-                <div class="fw-semibold text-light"> JQuery </div>
-                <!--small class="text-secondary d-block mb-2"> - </small-->
-              </div>
-            </div>
-            <!-- Item 5 -->
-            <div class="col-4">
-              <div class="expertise-item text-center">
-                <img src="https://www.w3schools.com/whatis/img_js.png" alt="JavaScript Image" class="img-fluid rounded mb-2">
-                <div class="fw-semibold text-light"> JavaScript </div>
-                <!--small class="text-secondary d-block mb-2"> - </small-->
-              </div>
-            </div>
-            <!-- Item 6 -->
-            <div class="col-4">
-              <div class="expertise-item text-center">
-                <img src="https://www.careercollegeindia.com/blog/wp-content/uploads/2024/09/UI-UX-Designer-scaled.jpg" alt="UI and UX" class="img-fluid rounded mb-2">
-                <div class="fw-semibold text-light"> UI, UX </div>
-                <!--small class="text-secondary d-block mb-2"> - </small-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Expertise End -->
-        <!-- Projects -->
-        <div class='card p-4 mt-4' id='projectsCard'>
-          <div class='d-flex justify-content-between align-items-center mb-3'>
-            <h2 class='mb-0 text-light'>My Projects</h2>
-            <a href='#'>
-              <button class='btn projectsBtn' aria-label="View All Button"> View all <i class='bi bi-chevron-right m-1'></i>
-              </button>
-            </a>
-          </div>
-          <!-- Project Item -->
-          <div class='project-item' onclick='window.open("https://niyasali.w3spaces.com/nextrip-demo.html", "_blank", "noopener")'>
-            <div class='d-flex align-items-center'>
-              <div class='project-icon bg-light'>
-                <img alt='Nextrip logo' src='/images/nextrip.jpg' />
-              </div>
-              <div>
-                <div class='fw-semibold text-light'> Nextrip </div>
-                <small class='text-secondary'>Landing page, Visual design, Branding, <br /> Calls-to-action, Responsive layout </small>
-              </div>
-            </div>
-            <i class='bi bi-box-arrow-up-right text-light'></i>
-          </div>
-          <!-- Project Item End -->
-          <!-- Project Item -->
-          <div class='project-item' onclick='window.open("https://textio-share.blogspot.com/", "_blank", "noopener")'>
-            <div class='d-flex align-items-center'>
-              <div class='project-icon bg-light'>
-                <img alt='textio share' src='/images/textio-share.jpg' />
-              </div>
-              <div>
-                <div class='fw-semibold text-light'> Textio Share </div>
-                <small class='text-secondary'>Firebase Integration, Visual design, <br /> Responsive layout </small>
-              </div>
-            </div>
-            <i class='bi bi-box-arrow-up-right text-light'></i>
-          </div>
-          <!-- Project Item End -->
-          <!-- Project Item -->
-          <div class='project-item' onclick='window.open("https://me-niyas-ali.github.io/windows-11-mockup/", "_blank", "noopener")'>
-            <div class='d-flex align-items-center'>
-              <div class='project-icon bg-light'>
-                <img alt='windows 11 mockup' src='/images/windows-11-mockup.jpg' />
-              </div>
-              <div>
-                <div class='fw-semibold text-light'> Windows 11 Mockup </div>
-                <small class='text-secondary'>Visual design, Responsive layout, <br /> Interactive Icons </small>
-              </div>
-            </div>
-            <i class='bi bi-box-arrow-up-right text-light'></i>
-          </div>
-          <!-- Project Item End -->
-        </div>
-        <!-- Projects End -->
-        <!-- Hire me -->
-        <div class="card p-4 text-center mt-4" id="hireMeCard">
-          <h2 class="fw-bold text-light"> Lets work together</h2>
-          <p class="text-light mb-3"> Creating user experience and visual appealing designs </p>
-          <div class="d-flex justify-content-center align-items-center gap-3">
-            <button class="btn hireMeBtn" aria-label="Hire Me Button">
-              <i class="bi bi-plus-circle"></i> Hire Me </button>
-            <button class="btn btn-sm copy-email-btn" data-email="niyasaliskrm1@gmail.com" aria-label="Copy Email Button">
-              <i class="bi bi-clipboard m-1"></i> Copy Email </button>
-          </div>
-        </div>
-        <!-- Hire me End -->
-      </div>
-      <!-- Home End -->
-      <!-- Main Profile -->
-      <div class="card px-4 py-2 mt-4" id="mainProfileCard" style="display:none;">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <div class="badge d-inline-flex align-items-center badge" aria-label="Front-End Web Designer">Front-End Web Designer</div>
-            <h1 class="fw-bold text-light mt-3">I’m Niyas Ali</h1>
-          </div>
-          <div class="text-center mb-3">
-            <img src="https://me-niyas-ali.github.io/getfile/pro-pic-new.jpg" class="avatar" alt="Profile image of Niyas Ali">
-          </div>
-        </div>
-        <p class="text-light">
-          <span class="ms-3">A</span> Front-End Web Designer based in Kerala, India, with freelance experience and a strong passion for creating clean, responsive, and user-friendly websites. I enjoy turning complex ideas into seamless digital experiences that connect users with technology.
-        </p>
-        <p class="text-light"> Skilled in HTML, CSS, JavaScript, and Bootstrap, I stay up to date with modern web trends and tools. Beyond design work, I explore creative coding, new tech, and contribute to community tech initiatives, always aiming to grow and give back. </p>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="d-flex my-2 gap-3">
-            <button class="btn d-flex align-items-center justify-content-center hireMeBtn" aria-label="Hire Me Button">
-              <i class="bi bi-plus-circle m-1"></i> Hire Me </button>
-            <button class="btn d-flex align-items-center justify-content-center copy-email-btn" data-email="niyasaliskrm1@gmail.com" aria-label="Copy Email Button">
-              <i class="bi bi-clipboard m-1"></i> Copy Email </button>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="d-flex my-2 gap-3">
-            <button class="btn d-flex align-items-center justify-content-center projectsBtn" aria-label="Projects Button">
-              <i class="bi bi-window m-1"></i> My Side Projects </button>
-            <button class="btn d-flex align-items-center justify-content-center hireMeBtn" aria-label="Whatsapp messages Button">
-              <i class="bi bi-whatsapp m-1"></i> Get in touch</button>
-          </div>
-        </div>
-      </div>
-      <!-- Main Profile End -->
-      <!-- Main Projects -->
-      <div class='card p-4 mt-4' id='mainProjectsCard' style='display:none;'>
-        <div class='d-flex justify-content-between align-items-center mb-3'>
-          <h2 class='text-light my-2'>My Projects</h2>
-        </div>
-        <!-- Project Item -->
-        <div class='project-item' onclick='window.open("https://niyasali.w3spaces.com/nextrip-demo.html", "_blank", "noopener")'>
-          <div class='d-flex align-items-center'>
-            <div class='project-icon bg-light'>
-              <img alt='Nextrip logo' src='/images/nextrip.jpg' />
-            </div>
-            <div>
-              <div class='fw-semibold text-light'> Nextrip </div>
-              <small class='text-secondary'>Landing page, Visual design, Branding, <br /> Calls-to-action, Responsive layout </small>
-            </div>
-          </div>
-          <i class='bi bi-box-arrow-up-right text-light'></i>
-        </div>
-        <!-- Project Item End -->
-        <!-- Project Item -->
-        <div class='project-item' onclick='window.open("https://textio-share.blogspot.com/", "_blank", "noopener")'>
-          <div class='d-flex align-items-center'>
-            <div class='project-icon bg-light'>
-              <img alt='textio-share' src='/images/textio-share.jpg' />
-            </div>
-            <div>
-              <div class='fw-semibold text-light'> Textio Share </div>
-              <small class='text-secondary'>Firebase Integration, Visual design, <br /> Responsive layout </small>
-            </div>
-          </div>
-          <i class='bi bi-box-arrow-up-right text-light'></i>
-        </div>
-        <!-- Project Item End -->
-        <!-- Project Item -->
-        <div class='project-item' onclick='window.open("https://me-niyas-ali.github.io/windows-11-mockup/", "_blank", "noopener")'>
-          <div class='d-flex align-items-center'>
-            <div class='project-icon bg-light'>
-              <img alt='windows-11-mockup logo' src='/images/windows-11-mockup.jpg' />
-            </div>
-            <div>
-              <div class='fw-semibold text-light'> Windows 11 Mockup </div>
-              <small class='text-secondary'>Visual design, Responsive layout, <br /> Interactive Icons </small>
-            </div>
-          </div>
-          <i class='bi bi-box-arrow-up-right text-light'></i>
-        </div>
-        <!-- Project Item End -->
-        <!-- Project Item -->
-        <div class='project-item' onclick='window.open("https://me-niyas-ali.github.io/expense-book/", "_blank", "noopener")'>
-          <div class='d-flex align-items-center'>
-            <div class='project-icon bg-light'>
-              <img alt='expense-book logo' src='/images/expense-book.jpg' />
-            </div>
-            <div>
-              <div class='fw-semibold text-light'> Expense Book </div>
-              <small class='text-secondary'>Visual design, Branding, <br />Responsive layout </small>
-            </div>
-          </div>
-          <i class='bi bi-box-arrow-up-right text-light'></i>
-        </div>
-        <!-- Project Item End -->
-        <!-- Project Item -->
-        <div class='project-item' onclick='window.open("https://me-niyas-ali.github.io/store-dashboard/", "_blank", "noopener")'>
-          <div class='d-flex align-items-center'>
-            <div class='project-icon bg-light'>
-              <img alt='store-dashboard logo' src='/images/store-dashboard.jpg' />
-            </div>
-            <div>
-              <div class='fw-semibold text-light'> Store Dashboard </div>
-              <small class='text-secondary'>Bar-Graph Data, Visual design, <br />Responsive layout </small>
-            </div>
-          </div>
-          <i class='bi bi-box-arrow-up-right text-light'></i>
-        </div>
-        <!-- Project Item End -->
-        <!-- Project Item -->
-        <div class='project-item' onclick='window.open("https://linkio-share.blogspot.com/", "_blank", "noopener")'>
-          <div class='d-flex align-items-center'>
-            <div class='project-icon bg-light'>
-              <img alt='linkio-share logo' src='/images/linkio-share.jpg' />
-            </div>
-            <div>
-              <div class='fw-semibold text-light'> Linkio Share </div>
-              <small class='text-secondary'>Firebase Integration, Visual design, <br /> Responsive layout </small>
-            </div>
-          </div>
-          <i class='bi bi-box-arrow-up-right text-light'></i>
-        </div>
-        <!-- Project Item End -->
-      </div>
-      <!-- Projects End -->
-      <!-- Message Card -->
-      <div class="card pt-3 p-4 mt-4" id="messageCard" style="display:none;">
-        <h2 class="mb-3 text-light">Design Inquiry</h2>
-        <p class="text-light"> Got an idea and need design help? <br />Reach out now </p>
-        <form id="whatsappForm">
-          <div class="mb-2">
-            <label class="form-label text-light">Name</label>
-            <input type="text" class="form-control text-light" id="name" required>
-          </div>
-          <div class="mb-2">
-            <label class="form-label text-light">Email</label>
-            <input type="email" class="form-control text-light" id="email" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label text-light">Message</label>
-            <textarea class="form-control text-light" rows="4" id="message" required></textarea>
-          </div>
-          <button type="submit" class="btn w-100 btn-primary btn-sm">
-            <i class="bi bi-send me-1"></i> Send Message </button>
-        </form>
-      </div>
-      <!--Message Card End -->
-      <!-- Footer -->
-      <div class="card p-4 text-center mt-4" id="followMeCard">
-        <div class="d-flex justify-content-center align-items-center gap-3">
-          <div>
-            <h2 class="fw-bold text-light"> Follow me</h2>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="d-flex mt-2 gap-3">
-                <button class="btn btn-lg d-flex align-items-center justify-content-center" onclick="window.open('https://github.com/me-niyas-ali', '_blank', 'noopener')" aria-label="Follow Button">
-                  <i class="bi bi-github"></i>
-                </button>
-                <button class="btn btn-lg d-flex align-items-center justify-content-center" onclick="window.open('https://www.facebook.com/niyas.ct.71/', '_blank', 'noopener')" aria-label="Follow Button">
-                  <i class="bi bi-facebook"></i>
-                </button>
-                <button class="btn btn-lg d-flex align-items-center justify-content-center" onclick="window.open('https://www.instagram.com/me.niyas.ali/', '_blank', 'noopener')" aria-label="Follow Button">
-                  <i class="bi bi-instagram"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="text-center my-3 text-secondary"> Design inspired from <br>Subtle Folio – Framer Template </p>
-      </div>
-      <!-- Footer End -->
+     </div>
+     <!-- Hire me End -->
     </div>
-  </body>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    // =========================
-    // jQuery Navigation Logic
-    // =========================
-    jQuery(document).ready(function() {
-      // Default active button
-      jQuery('#homeBtn').addClass('active-btn');
-      jQuery('#homeBtn').on('click', function() {
-        jQuery('.nav-btn').removeClass('active-btn');
-        jQuery(this).addClass('active-btn');
-        jQuery('#homePage').delay(300).fadeIn(500);
-        jQuery('#mainProfileCard, #mainProjectsCard, #messageCard').fadeOut(400);
-      });
-      jQuery('.profileBtn').on('click', function() {
-        jQuery('.nav-btn').removeClass('active-btn');
-        jQuery('#profileBtn').addClass('active-btn');
-        jQuery('#homePage, #mainProjectsCard, #messageCard').fadeOut(400);
-        jQuery('#mainProfileCard').delay(300).fadeIn(500);
-      });
-      jQuery('.projectsBtn').on('click', function() {
-        jQuery('.nav-btn').removeClass('active-btn');
-        jQuery('#projectsBtn').addClass('active-btn');
-        jQuery('#homePage, #mainProfileCard, #messageCard').fadeOut(400);
-        jQuery('#mainProjectsCard').delay(300).fadeIn(500);
-      });
-      jQuery('.hireMeBtn').on('click', function() {
-        jQuery('.nav-btn').removeClass('active-btn');
-        jQuery('#hireMeBtn').addClass('active-btn');
-        jQuery('#homePage, #mainProfileCard, #mainProjectsCard').fadeOut(400);
-        jQuery('#messageCard').delay(300).fadeIn(500);
-      });
+    <!-- Home End -->
+    <!-- Main Profile -->
+    <div class="card px-4 py-2 mt-4" id="mainProfileCard" style="display:none;">
+     <div class="d-flex justify-content-between align-items-center">
+      <div>
+       <div class="badge d-inline-flex align-items-center badge" aria-label="Front-End Web Designer">
+        Front-End Web Designer
+       </div>
+       <h1 class="fw-bold text-light mt-3">I’m Niyas Ali</h1>
+      </div>
+      <div class="text-center mb-3">
+       <img src="https://me-niyas-ali.github.io/getfile/pro-pic-new.jpg" class="avatar" alt="Profile image of Niyas Ali">
+      </div>
+     </div>
+     <p class="text-light">
+      <span class="ms-3">A</span> Front-End Web Designer based in Kerala, India, with freelance experience and a strong passion for creating clean, responsive, and user-friendly websites. I enjoy turning complex ideas into seamless digital experiences that connect users with technology.
+     </p>
+     <p class="text-light">
+      Skilled in HTML, CSS, JavaScript, and Bootstrap, I stay up to date with modern web trends and tools. Beyond design work, I explore creative coding, new tech, and contribute to community tech initiatives, always aiming to grow and give back.
+     </p>
+     <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex my-2 gap-3">
+       <button class="btn d-flex align-items-center justify-content-center hireMeBtn" aria-label="Hire Me Button">
+        <i class="bi bi-plus-circle m-1"></i> Hire Me </button>
+       <button class="btn d-flex align-items-center justify-content-center copy-email-btn" data-email="niyasaliskrm1@gmail.com" aria-label="Copy Email Button">
+        <i class="bi bi-clipboard m-1"></i> Copy Email </button>
+      </div>
+     </div>
+     <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex my-2 gap-3">
+       <button class="btn d-flex align-items-center justify-content-center projectsBtn" aria-label="Projects Button">
+        <i class="bi bi-window m-1"></i> My Side Projects </button>
+       <button class="btn d-flex align-items-center justify-content-center hireMeBtn" aria-label="Whatsapp messages Button">
+        <i class="bi bi-whatsapp m-1"></i> Get in touch</button>
+      </div>
+     </div>
+    </div>
+    <!-- Main Profile End -->
+    <!-- Main Projects -->
+    <div class='card p-4 mt-4' id='mainProjectsCard' style='display:none;'>
+     <div class='d-flex justify-content-between align-items-center mb-3'>
+      <h2 class='text-light my-2'>My Projects</h2>
+     </div>
+     <!-- Project Item -->
+     <div class='project-item' onclick='window.open("https://niyasali.w3spaces.com/nextrip-demo.html", "_blank", "noopener")'>
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='Nextrip logo' src='/images/nextrip.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Nextrip
+        </div>
+        <small class='text-secondary'>Landing page, Visual design, Branding, <br /> Calls-to-action, Responsive layout </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </div>
+     <!-- Project Item End -->
+     <!-- Project Item -->
+     <div class='project-item' onclick='window.open("https://textio-share.blogspot.com/", "_blank", "noopener")'>
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='textio-share' src='/images/textio-share.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Textio Share
+        </div>
+        <small class='text-secondary'>Firebase Integration, Visual design, <br /> Responsive layout </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </div>
+     <!-- Project Item End -->
+     <!-- Project Item -->
+     <div class='project-item' onclick='window.open("https://me-niyas-ali.github.io/windows-11-mockup/", "_blank", "noopener")'>
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='windows-11-mockup logo' src='/images/windows-11-mockup.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Windows 11 Mockup
+        </div>
+        <small class='text-secondary'>Visual design, Responsive layout, <br /> Interactive Icons </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </div>
+     <!-- Project Item End -->
+     <!-- Project Item -->
+     <div class='project-item' onclick='window.open("https://me-niyas-ali.github.io/expense-book/", "_blank", "noopener")'>
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='expense-book logo' src='/images/expense-book.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Expense Book
+        </div>
+        <small class='text-secondary'>Visual design, Branding, <br />Responsive layout </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </div>
+     <!-- Project Item End -->
+     <!-- Project Item -->
+     <div class='project-item' onclick='window.open("https://me-niyas-ali.github.io/store-dashboard/", "_blank", "noopener")'>
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='store-dashboard logo' src='/images/store-dashboard.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Store Dashboard
+        </div>
+        <small class='text-secondary'>Bar-Graph Data, Visual design, <br />Responsive layout </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </div>
+     <!-- Project Item End -->
+     <!-- Project Item -->
+     <div class='project-item' onclick='window.open("https://linkio-share.blogspot.com/", "_blank", "noopener")'>
+      <div class='d-flex align-items-center'>
+       <div class='project-icon bg-light'>
+        <img alt='linkio-share logo' src='/images/linkio-share.jpg' />
+       </div>
+       <div>
+        <div class='fw-semibold text-light'>
+         Linkio Share
+        </div>
+        <small class='text-secondary'>Firebase Integration, Visual design, <br /> Responsive layout </small>
+       </div>
+      </div>
+      <i class='bi bi-box-arrow-up-right text-light'></i>
+     </div>
+     <!-- Project Item End -->
+    </div>
+    <!-- Projects End -->
+    <!-- Message Card -->
+    <div class="card pt-3 p-4 mt-4" id="messageCard" style="display:none;">
+     <h2 class="mb-3 text-light">Design Inquiry</h2>
+     <p class="text-light">
+      Got an idea and need design help? <br />Reach out now
+     </p>
+     <form id="whatsappForm">
+      <div class="mb-2">
+       <label class="form-label text-light">Name</label>
+       <input type="text" class="form-control text-light" id="name" required>
+      </div>
+      <div class="mb-2">
+       <label class="form-label text-light">Email</label>
+       <input type="email" class="form-control text-light" id="email" required>
+      </div>
+      <div class="mb-3">
+       <label class="form-label text-light">Message</label>
+       <textarea class="form-control text-light" rows="4" id="message" required></textarea>
+      </div>
+      <button type="submit" class="btn w-100 btn-primary btn-sm">
+       <i class="bi bi-send me-1"></i> Send Message </button>
+     </form>
+    </div>
+    <!--Message Card End -->
+    <!-- Footer -->
+    <div class="card p-4 text-center mt-4" id="followMeCard">
+     <div class="d-flex justify-content-center align-items-center gap-3">
+      <div>
+       <h2 class="fw-bold text-light"> Follow me</h2>
+       <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex mt-2 gap-3">
+         <button class="btn btn-lg d-flex align-items-center justify-content-center" onclick="window.open('https://github.com/me-niyas-ali', '_blank', 'noopener')" aria-label="Follow Button">
+          <i class="bi bi-github"></i>
+         </button>
+         <button class="btn btn-lg d-flex align-items-center justify-content-center" onclick="window.open('https://www.facebook.com/niyas.ct.71/', '_blank', 'noopener')" aria-label="Follow Button">
+          <i class="bi bi-facebook"></i>
+         </button>
+         <button class="btn btn-lg d-flex align-items-center justify-content-center" onclick="window.open('https://www.instagram.com/me.niyas.ali/', '_blank', 'noopener')" aria-label="Follow Button">
+          <i class="bi bi-instagram"></i>
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+     <p class="text-center my-3 text-secondary">
+      Design inspired from <br>Subtle Folio – Framer Template
+     </p>
+    </div>
+    <!-- Footer End -->
+   </div>
+  </main>
+ </body>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+  // =========================
+  // jQuery Navigation Logic
+  // =========================
+  jQuery(document).ready(function() {
+   // Default active button
+   jQuery('#homeBtn').addClass('active-btn');
+   jQuery('#homeBtn').on('click', function() {
+    jQuery('.nav-btn').removeClass('active-btn');
+    jQuery(this).addClass('active-btn');
+    jQuery('#homePage').delay(300).fadeIn(500);
+    jQuery('#mainProfileCard, #mainProjectsCard, #messageCard').fadeOut(400);
+   });
+   jQuery('.profileBtn').on('click', function() {
+    jQuery('.nav-btn').removeClass('active-btn');
+    jQuery('#profileBtn').addClass('active-btn');
+    jQuery('#homePage, #mainProjectsCard, #messageCard').fadeOut(400);
+    jQuery('#mainProfileCard').delay(300).fadeIn(500);
+   });
+   jQuery('.projectsBtn').on('click', function() {
+    jQuery('.nav-btn').removeClass('active-btn');
+    jQuery('#projectsBtn').addClass('active-btn');
+    jQuery('#homePage, #mainProfileCard, #messageCard').fadeOut(400);
+    jQuery('#mainProjectsCard').delay(300).fadeIn(500);
+   });
+   jQuery('.hireMeBtn').on('click', function() {
+    jQuery('.nav-btn').removeClass('active-btn');
+    jQuery('#hireMeBtn').addClass('active-btn');
+    jQuery('#homePage, #mainProfileCard, #mainProjectsCard').fadeOut(400);
+    jQuery('#messageCard').delay(300).fadeIn(500);
+   });
+  });
+  // =========================
+  // Copy Email Button Logic
+  // =========================
+  document.addEventListener("DOMContentLoaded", function() {
+   document.querySelectorAll(".copy-email-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+     const email = btn.getAttribute("data-email");
+     const originalHTML = btn.innerHTML;
+     try {
+      await navigator.clipboard.writeText(email);
+      btn.innerHTML = "<i class = 'bi bi-check-circle m-1'> </i> Copied!";
+      setTimeout(() => btn.innerHTML = originalHTML, 1500);
+     } catch {
+      btn.innerHTML = "<i class = 'bi bi-exclamation-circle m-1'> </i> Failed!";
+     }
     });
-    // =========================
-    // Copy Email Button Logic
-    // =========================
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll(".copy-email-btn").forEach(btn => {
-        btn.addEventListener("click", async () => {
-          const email = btn.getAttribute("data-email");
-          const originalHTML = btn.innerHTML;
-          try {
-            await navigator.clipboard.writeText(email);
-            btn.innerHTML = "<i class = 'bi bi-check-circle m-1'> </i> Copied!";
-            setTimeout(() => btn.innerHTML = originalHTML, 1500);
-          } catch {
-            btn.innerHTML = "<i class = 'bi bi-exclamation-circle m-1'> </i> Failed!";
-          }
-        });
-      });
-    });
-    // =========================
-    // WhatsApp Form Logic
-    // =========================
-    document.addEventListener("DOMContentLoaded", function() {
-      const form = document.getElementById("whatsappForm");
-      if (!form) return;
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-        const phoneNumber = "919645245018"; // without +
-        const whatsappMessage = `Design Inquiry\n\n` + `Name: ${name}\n\n` + `Email: ${email}\n\n` + `Message: ${message}`;
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-        window.open(whatsappURL, "_blank");
-        form.reset();
-      });
-    });
-  </script>
-</html> j
+   });
+  });
+  // =========================
+  // WhatsApp Form Logic
+  // =========================
+  document.addEventListener("DOMContentLoaded", function() {
+   const form = document.getElementById("whatsappForm");
+   if (!form) return;
+   form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const phoneNumber = "919645245018"; // without +
+    const whatsappMessage = `Design Inquiry\n\n` + `Name: ${name}\n\n` + `Email: ${email}\n\n` + `Message: ${message}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappURL, "_blank");
+    form.reset();
+   });
+  });
+ </script>
+</html>
